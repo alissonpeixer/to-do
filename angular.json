@@ -25,6 +25,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@po-ui/style/css/po-theme-default-variables.min.css",
+              "node_modules/@po-ui/style/css/po-theme-core.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -84,15 +86,24 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/monaco-editor/min",
+                "output": "/assets/monaco/"
+              }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/@po-ui/style/css/po-theme-default.min.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "02ebc6cb-e493-4894-9119-621a47f257d9"
   }
 }
